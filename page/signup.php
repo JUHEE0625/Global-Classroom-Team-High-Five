@@ -1,6 +1,6 @@
 
 
-<!DOCTYPE html>
+
 <html lang="en" >
 
 <head>
@@ -12,7 +12,7 @@
 <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css'>
 <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
 <link rel="stylesheet" type="text/css" href="../css/temp2.css">
-
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js" ></script>
 <script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -70,7 +70,7 @@
 	</div>
 
 
-
+  <form name="signUp" action="./memberSave.php" method="post" onsubmit="return checkSubmit()">
 	  <div class="modal fade" id="layoutitModal" tabindex="-1" role="dialog" aria-labelledby="layoutitModal" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content"></div>
@@ -149,7 +149,7 @@
         <div class="input-field col s12">
           <!-- <i class="mdi-action-lock-outline prefix"></i> -->
           <i class="material-icons prefix">vpn_key</i>
-          <input id="password_a" name="cpassword" type="password" />
+          <input id="password_a" name="password_a" type="password" />
           <label for="password_a">Password again</label>
               <div class="memberPw2Comment"></div>
         </div>
@@ -158,7 +158,7 @@
       <div class="row">
         <div class="input-field col s12">
           <button type="submit" style="  background-color:#141b55 ;"class="btn waves-effect waves-light col s12">REGISTER NOW</button>
-
+    <input type="submit" value="가입하기" class="submit" />
         </div>
         <div class="input-field col s12">
           <p class="margin center medium-small sign-up">Already have an account? <a href="./login">Login</a></p>
@@ -169,6 +169,8 @@
     </form>
   </div>
 </div>
+</form>
+echo
 <div class="formCheck">
 
 		<input type="hidden" name="idCheck" class="idCheck" />
