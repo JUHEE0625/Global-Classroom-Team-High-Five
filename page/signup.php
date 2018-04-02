@@ -11,7 +11,7 @@
   <title>Register</title>
 <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css'>
 <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
-<link rel="stylesheet" type="text/css" href="temp2.css">
+<link rel="stylesheet" type="text/css" href="../css/temp2.css">
 
 <script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,7 +23,7 @@
     window.parent.postMessage("resize", "*");
   }
 </script>
-
+<script type="text/javascript" src="../js/mySignupForm.js"></script>
 	<link href="http://cdn.layoutit.com/css/app.min-af7c774190.css" rel="stylesheet">
 
 
@@ -124,6 +124,7 @@
           <i class="material-icons prefix">email</i>
           <input id="email" name="email" type="email" style="cursor: auto;" />
           <label for="email">Email</label>
+                  <div class="memberEmailAddressComment"></div>
         </div>
       </div>
 			<div class="row margin">
@@ -132,6 +133,7 @@
 					<i class="material-icons prefix">person_add</i>
 					<input id="userId" name="userId" type="text" />
 					<label for="user_id">ID</label>
+                        <div class="memberIdComment"></div>
 				</div>
 			</div>
       <div class="row margin">
@@ -149,6 +151,7 @@
           <i class="material-icons prefix">vpn_key</i>
           <input id="password_a" name="cpassword" type="password" />
           <label for="password_a">Password again</label>
+              <div class="memberPw2Comment"></div>
         </div>
       </div>
 
