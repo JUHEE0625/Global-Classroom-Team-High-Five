@@ -1,12 +1,21 @@
 <?php
+echo '회원가입';
+
     include "../include/dbConnect.php";
-    /*echo "<pre>";
-    echo var_dump($_POST);*/
+    $host = 'localhost';
+    $user = 'root';
+    $passWord = '';
+    $dbName = 'myproject';
+
+    $dbConnect = new mysqli($host,$user,$passWord,$dbName);
+    echo "<pre>";
+    echo var_dump($_POST);
 
     $memberId = $_POST['userId'];
     $memberName = $_POST['username'];
     $memberPw = $_POST['password'];
-    $memberPw2 = $_POST['password_a'];
+$memberPw2 = $_POST['password_a'];
+    $memberPhone=$_POST['userPhone'];
     $memberEmailAddress = $_POST['email'];
 
 
@@ -21,16 +30,10 @@
     }
 
     //비밀번호 일치하는지 확인
-    if($memberPw !== $memberPw2){
-        echo 'Passwords are not corrected.';
-        exit;
-    }else{
-        //비밀번호를 암호화 처리.
-        $memberPw = md5($memberPw);
-    }
+
 
     //닉네임, 생일 그리고 이름이 빈값이 아닌지
-    if($memberNickName == '' || $memberBirthDay == '' || $memberName == ''){
+    if( $memberName == ''){
         echo 'There is no name.';
         exit;
     }
@@ -44,9 +47,18 @@
     }
 
     //이제부터 넣기 시작
-    $sql = "INSERT INTO member VALUES('','{$memberId}','{$memberName}','{$memberNickName}','{$memberPw}','{$memberEmailAddress}','{$memberBirthDay}');";
+    $sql = "INSERT INTO member VALUES('{$memberId}','{$memberPw}','{$memberName}','{$memberEmailAddress}','{$memberPhone}');";
 
     if($dbConnect->query($sql)){
-        echo 'Success to Sign Up';
+      echo "<script>alert(\"Now you are Hilton Hotel's member!\");
+      history.back();
+      </script>";
+
     }
+    else {
+      echo "<script>alert(\"Try again....\");
+      history.back();
+      </script>";
+    }
+
 ?>
